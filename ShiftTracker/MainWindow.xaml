@@ -1,0 +1,57 @@
+﻿<Window x:Class="ShiftTracker.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ShiftTracker"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="*" />
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+
+
+        <!-- Первая колонка, 3 строка -->
+        <TextBlock Grid.Column="0" Grid.Row="3" Text="Сотрудник" TextAlignment="Right" Margin="20" />
+
+        <!-- Вторая колонка, 3 строка -->
+        <ComboBox x:Name ="EmployeeBox" Grid.Column="1" Grid.Row="3" Margin="20" SelectionChanged="EmployeeBox_SelectionChanged"/>
+
+        <!-- Первая колонка, 1 строка -->
+        <TextBlock Grid.Column="0" Grid.Row="1" Text="Город" TextAlignment="Right" Margin="20" />
+
+        <!-- Вторая колонка, 1 строка -->
+        <ComboBox x:Name ="CityBox" Grid.Column="1" Grid.Row="1" Margin="20"  SelectionChanged="CityBox_SelectionChanged"/>
+
+        <!-- Первая колонка, 2 строка -->
+        <TextBlock Grid.Column="0" Grid.Row="2" Text="Цех" TextAlignment="Right" Margin="20" />
+
+        <!-- Вторая колонка, 2 строка -->
+        <ComboBox x:Name ="WorkshopBox" Grid.Column="1" Grid.Row="2" Margin="20" SelectionChanged="WorkshopBox_SelectionChanged"/>
+
+        <!-- Первая колонка, 4 строка -->
+        <TextBlock Grid.Column="0" Grid.Row="4" Text="Бригада" TextAlignment="Right" Margin="20" />
+
+        <!-- Вторая колонка, 4 строка -->
+        <ComboBox x:Name ="BrigadeBox" Grid.Column="1" Grid.Row="4" Margin="20" SelectionChanged="BrigadeBox_SelectionChanged" ItemsSource="{Binding brigades}"/>
+
+        <!-- Первая колонка, 5 строка -->
+        <TextBlock Grid.Column="0" Grid.Row="5" Text="Укажите смену" TextAlignment="Right" Margin="20" />
+
+        <!-- Вторая колонка, 5 строка -->
+        <TextBox x:Name ="ShiftString" Grid.Column="1" Grid.ColumnSpan="1" Grid.Row="5" Margin="20" SelectionChanged="ShiftString_SomeWrote"/>
+        <CheckBox x:Name ="Right" Grid.Column="2" Content="" HorizontalAlignment="Left" Margin="5,22,0,0" Grid.Row="5" VerticalAlignment="Top" IsEnabled="False"/>
+    </Grid>
+
+</Window>
