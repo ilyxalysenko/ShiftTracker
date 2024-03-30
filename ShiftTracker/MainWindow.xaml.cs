@@ -32,11 +32,8 @@ namespace ShiftTracker
         public MainWindow()
         {
             InitializeComponent();
-
-            // Инициализация данных
             Base.InitializeData();
 
-            // Заполнение ComboBox'ов
             foreach (var city in Base.Cities)
             {
                 CityBox.Items.Add(city.Name);
@@ -49,10 +46,7 @@ namespace ShiftTracker
                     }
                 }
             }
-            foreach (var brigade in Base.Brigades)
-            {
-                BrigadeBox.Items.Add(brigade.Name);
-            }
+            FillBrigadeBox();
         }
         private void CityBox_SelectionChanged(object sender, RoutedEventArgs e)
         {
@@ -141,6 +135,13 @@ namespace ShiftTracker
                 {
                     EmployeeBox.Items.Add(employee.Name);
                 }
+            }
+        }
+        void FillBrigadeBox()
+        {
+            foreach (var brigade in Base.Brigades)
+            {
+                BrigadeBox.Items.Add(brigade.Name);
             }
         }
     }

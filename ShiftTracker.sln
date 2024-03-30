@@ -5,6 +5,11 @@ VisualStudioVersion = 17.9.34701.34
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ShiftTracker", "ShiftTracker\ShiftTracker.csproj", "{71D32D49-E2A2-467E-A905-82074089DFDF}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "SQL-command-folder", "SQL-command-folder", "{31FB76E1-3983-4A1C-9FB9-CA3A88788D12}"
+	ProjectSection(SolutionItems) = preProject
+		..\..\..\Desktop\query.sql = ..\..\..\Desktop\query.sql
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
