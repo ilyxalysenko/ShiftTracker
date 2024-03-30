@@ -7,9 +7,8 @@ using System.Windows.Markup;
 
 namespace ShiftTracker.Models.Entities
 {
-    internal class Shift
+    internal class Shift : Entity
     {
-        private string _name;
-        public string Name { get { return _name; } set { _name = value; } }
+        public Shift (string name) : base(name) { Name = name; }
     }
 }

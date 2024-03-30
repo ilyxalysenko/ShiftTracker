@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ShiftTracker.Models.Entities;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -6,14 +7,9 @@ using System.Threading.Tasks;
 
 namespace ShiftTracker.Models
 {
-    internal class City
+    internal class City : Entity
     {
-        private string _name;
-        public string Name { get { return _name; } set { _name = value; } }
         public List<Workshop> Workshops;
-        public City(string name)
-        {
-            Name = name; Workshops = new List<Workshop>();
-        }
+        public City(string name) : base(name) { Name = name; }
     }
 }
